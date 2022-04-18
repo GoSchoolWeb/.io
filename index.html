@@ -1,0 +1,328 @@
+<style>
+  html {
+    font-size=15px;
+    font-family: monospace;
+  }
+
+  #header {
+    font-family: monospace;
+    font-size: 50px;
+    font-style: italic;
+    padding: 30px;
+    text-align: center;
+    background: hsl(0 0% 5%);
+    color: white
+  }
+
+  #body {
+    display: flex;
+    background: rgb(141 216 211);
+  }
+
+  #lefttab {
+    padding-top: 10px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #profile {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 0px padding-top: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-family: monospace;
+    margin: 0px auto 20px auto;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  #profile-pic {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: 1rem;
+  }
+
+  #profile-text {
+    margin-top: 10px;
+    margin-top: 1rem;
+  }
+
+ 
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 34px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked+.slider {
+    background-color: green;
+  }
+
+  input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked+.slider:before {
+    -webkit-transform: translateX(66px);
+    -ms-transform: translateX(66px);
+    transform: translateX(66px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  #message-panel {
+    padding-top: 10px;
+    background: rgb(120 180 211);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #message-number {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  #message {
+    width: 90%;
+    margin: auto;
+  }
+
+  #person-pic {
+    padding: auto;
+    padding: 10px;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 100%;
+  }
+
+  .line {
+    border: 1px solid gray;
+    background: gray;
+  }
+
+  #voice-channels {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+  }
+
+  #voice-number {
+    display: flex;
+    background: rgb(120 180 211);
+  }
+
+  #voice-pic {
+    padding: auto;
+    padding: 10px;
+    margin: auto;
+    margin-right: 0px;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 100%;
+  }
+
+  #voice {
+    margin: auto;
+    margin-left: 5px;
+    width: 150px;
+    display: flex;
+  }
+
+  a {
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  #join-button {
+    margin: auto;
+    margin-right: 0px;
+  }
+</style>
+
+<main id="main">
+  <title>GoSchool</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <div id="header">GoSchool
+  </div>
+  <div id="body">
+    <div id="lefttab">
+      <div id="profile">
+        <h1>Profile</h1>
+        <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="Profile Picture" id="profile-pic" />
+        <h2>Alex</h2>
+        <div id="switch">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+          </div>
+        </label>
+        <h2>Synchronize UVA-SIS Classes
+          <a href="https://in.virginia.edu/sis" id="sis-link">Here</a>!
+        </h2>
+        </div>
+        <div id="voice-channels">
+          <h1>Voice Channels</h1>
+          <div id="voice-number">
+            <img src="https://cdn.clipartsfree.net/vector/medium/63938-black-volume-images.png" alt="Audio symbol" id="voice-pic" />
+            <div id="voice">
+              <h2>STS-1500</h2>
+              <button id="join-button" onclick="join1()">Join</button>
+              <script>
+                function join1() {
+                  alert("You are joining the STS-1500 Voice Channel");
+                }
+              </script>
+            </div>
+          </div>
+          <div id="voice-number">
+            <img src="https://cdn.clipartsfree.net/vector/medium/63938-black-volume-images.png" alt="Audio symbol" id="voice-pic" />
+            <div id="voice">
+              <h2>APMA-2120</h2>
+              <button id="join-button" onclick="join2()">Join</button>
+              <script>
+                function join2() {
+                  alert("You are joining the APMA-2120 Voice Channel");
+                }
+              </script>
+            </div>
+          </div>
+          <div id="voice-number">
+            <img src="https://cdn.clipartsfree.net/vector/medium/63938-black-volume-images.png" alt="Audio symbol" id="voice-pic" />
+            <div id="voice">
+              <h2>CS-1110</h2>
+              <button id="join-button" onclick="join3()">Join</button>
+              <script>
+                function join3() {
+                  alert("You are joining the CS-1110 Voice Channel");
+                }
+              </script>
+            </div>
+          </div>
+          <div id="voice-number">
+            <img src="https://cdn.clipartsfree.net/vector/medium/63938-black-volume-images.png" alt="Audio symbol" id="voice-pic" />
+            <div id="voice">
+              <h2>ENGR-1624</h2>
+              <button id="join-button" onclick="join4()">Join</button>
+              <script>
+                function join4() {
+                  alert("You are joining the ENGR-1624 Voice Channel");
+                }
+              </script>
+            </div>
+          </div>
+          <div id="voice-number">
+            <img src="https://cdn.clipartsfree.net/vector/medium/63938-black-volume-images.png" alt="Audio symbol" id="voice-pic" />
+            <div id="voice">
+              <h2>ECON-2020</h2>
+              <button id="join-button" onclick="join5()">Join</button>
+              <script>
+                function join5() {
+                  alert("You are joining the ECON-2020 Voice Channel");
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="message-panel">
+        <h1>Messages</h1>
+        <div id="message-number">
+          <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="Profile Picture" id="person-pic" />
+          <div id="message">
+            <a href="STS.html">STS-1500</a>
+            <p>Yeah, we need to finish that sometime this week</p>
+            <hr class="line" />
+          </div>
+        </div>
+        <div id="message-number">
+          <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="Profile Picture" id="person-pic" />
+          <div id="message">
+            <a href="APMA.html">APMA-2120</a>
+            <p>When day is the test on?</p>
+            <hr class="line" />
+          </div>
+        </div>
+        <div id="message-number">
+          <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="Profile Picture" id="person-pic" />
+          <div id="message">
+            <a href="CS.html">CS-1110</a>
+            <p>Looking for people who want to join my group for the group project</p>
+            <hr class="line" />
+          </div>
+        </div>
+        <div id="message-number">
+          <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="Profile Picture" id="person-pic" />
+          <div id="message">
+            <a href="ENGR.html">ENGR-1624</a>
+            <p>Can someone join the voice channel and help me out for a few minutes?</p>
+            <hr class="line" />
+          </div>
+        </div>
+        <div id="message-number">
+          <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="Profile Picture" id="person-pic" />
+          <div id="message">
+            <a href="ECON.html">ECON-2020</a>
+            <p>Has anyone finished Homework 4?</p>
+            <hr class="line" />
+          </div>
+        </div>
+      </div>
+      </body>
+</main>
